@@ -1,0 +1,682 @@
+/* ---- CSS Variables & Design Tokens ---- */
+:root {
+  /* Colors */
+  --bg-navy: #0a192f;
+  --bg-light-navy: #112240;
+  --bg-lightest-navy: #233554;
+  --text-slate: #8892b0;
+  --text-light-slate: #a8b2d1;
+  --text-lightest-slate: #ccd6f6;
+  --accent-teal: #64ffda;
+  --accent-teal-tint: rgba(100, 255, 218, 0.1);
+  --white: #e6f1ff;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Utilities */
+  --nav-height: 80px;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  --border-radius: 4px;
+}
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-navy);
+  color: var(--text-slate);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-lightest-slate);
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--accent-teal);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+/* ---- Utility Classes ---- */
+.accent {
+  color: var(--accent-teal);
+}
+
+.num {
+  color: var(--accent-teal);
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.75rem;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: var(--bg-navy);
+  background-color: var(--accent-teal);
+  border: 1px solid var(--accent-teal);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--accent-teal);
+}
+
+.btn-outline {
+  color: var(--accent-teal);
+  background-color: transparent;
+  border: 1px solid var(--accent-teal);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent-teal-tint);
+}
+
+/* ---- Component: Header/Nav ---- */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: var(--transition);
+}
+
+#navbar.nav-hidden {
+  transform: translateY(-100%);
+}
+
+#navbar.nav-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-lightest-slate);
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--text-lightest-slate);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent-teal);
+}
+
+.btn-nav {
+  padding: 0.5rem 1rem;
+  color: var(--accent-teal) !important;
+  border: 1px solid var(--accent-teal);
+  border-radius: var(--border-radius);
+}
+
+.btn-nav:hover {
+  background-color: var(--accent-teal-tint);
+}
+
+/* ---- Component: Hero ---- */
+.hero-section {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 40px;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  padding-right: 20px;
+  z-index: 2;
+}
+
+.hero-visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Ensure Three.js canvas fits container */
+.hero-visual canvas {
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+}
+
+.subtitle {
+  color: var(--accent-teal);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(40px, 8vw, 80px);
+  margin-bottom: 10px;
+}
+
+.hero-content .sub-heading {
+  font-size: clamp(30px, 6vw, 60px);
+  color: var(--text-light-slate);
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  max-width: 540px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+}
+
+/* ---- Sections Header ---- */
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: clamp(26px, 5vw, 32px);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.section-header .line {
+  height: 1px;
+  background-color: var(--bg-lightest-navy);
+  margin-left: 20px;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+/* ---- Component: About ---- */
+.about-grid {
+  display: flex;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 3;
+  font-size: 18px;
+}
+
+.about-card {
+  flex: 2;
+}
+
+.card-inner {
+  background-color: var(--bg-light-navy);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--bg-lightest-navy);
+}
+
+.card-inner h3 {
+  margin-bottom: 20px;
+  color: var(--accent-teal);
+  font-size: 20px;
+}
+
+.highlight-list li {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.highlight-list strong {
+  color: var(--text-lightest-slate);
+}
+
+/* ---- Component: Skills ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--bg-light-navy);
+  padding: 30px 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-teal);
+  box-shadow: 0 10px 30px -10px rgba(100, 255, 218, 0.15);
+}
+
+.skill-card h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-tags span {
+  font-size: 12px;
+  padding: 4px 10px;
+  background-color: var(--bg-navy);
+  border-radius: 12px;
+  color: var(--text-light-slate);
+  border: 1px solid var(--bg-lightest-navy);
+}
+
+/* Icons (using geometric CSS for now, could be replaced with SVG) */
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  background-color: var(--accent-teal-tint);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frontend-icon::after { content: "UI"; color: var(--accent-teal); font-weight: bold; }
+.backend-icon::after { content: "API"; color: var(--accent-teal); font-weight: bold; }
+.data-icon::after { content: "ML"; color: var(--accent-teal); font-weight: bold; }
+.tools-icon::after { content: "Ops"; color: var(--accent-teal); font-weight: bold; }
+
+/* ---- Component: Projects ---- */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  transition: transform 0.3s ease-out;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-image {
+  grid-column: 1 / 8;
+  grid-row: 1;
+  position: relative;
+  z-index: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  height: 350px;
+  background-color: var(--bg-light-navy);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(10, 25, 47, 0.5);
+  transition: var(--transition);
+}
+
+.project-card:hover .image-overlay {
+  background-color: transparent;
+}
+
+.project-content {
+  grid-column: 6 / -1;
+  grid-row: 1;
+  position: relative;
+  z-index: 2;
+  text-align: right;
+}
+
+.project-overline {
+  color: var(--accent-teal);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  background-color: var(--bg-light-navy);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: var(--text-light-slate);
+  font-size: 13px;
+}
+
+.project-links a {
+  margin-left: 20px;
+  color: var(--text-lightest-slate);
+  font-weight: 600;
+}
+
+.project-links a:hover {
+  color: var(--accent-teal);
+}
+
+/* Reversed project card */
+.project-card.reverse .project-image {
+  grid-column: 6 / -1;
+}
+
+.project-card.reverse .project-content {
+  grid-column: 1 / 8;
+  text-align: left;
+}
+
+.project-card.reverse .project-tech-list {
+  justify-content: flex-start;
+}
+
+.project-card.reverse .project-links a {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+/* ---- Component: Experience Timeline ---- */
+.timeline {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 100%;
+  width: 2px;
+  background-color: var(--bg-lightest-navy);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--bg-navy);
+  border: 2px solid var(--accent-teal);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.exp-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.exp-header h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.exp-header .company {
+  color: var(--accent-teal);
+  font-size: 18px;
+}
+
+.exp-date {
+  color: var(--text-light-slate);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.exp-details {
+  list-style-type: none;
+}
+
+.exp-details li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.exp-details li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-teal);
+}
+
+/* ---- Component: Contact ---- */
+.contact-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.contact-overline {
+  color: var(--accent-teal);
+  margin-bottom: 20px;
+}
+
+.contact-title {
+  font-size: clamp(40px, 5vw, 60px);
+  margin-bottom: 20px;
+}
+
+.contact-desc {
+  margin-bottom: 50px;
+}
+
+.contact-btn {
+  padding: 1.25rem 2rem;
+  font-size: 16px;
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}
+
+.social-links {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ---- Animations & States ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+  
+  .hero-visual {
+    height: 300px;
+    width: 100%;
+  }
+
+  .about-grid {
+    flex-direction: column;
+  }
+  
+  .project-card, .project-card.reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .project-image {
+    height: 250px;
+  }
+  
+  .project-content, .project-card.reverse .project-content {
+    text-align: left;
+    padding: 30px 20px;
+    background-color: var(--bg-light-navy);
+    border-radius: var(--border-radius);
+    margin-top: -30px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .project-description {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .project-tech-list, .project-card.reverse .project-tech-list {
+    justify-content: flex-start;
+  }
+  
+  .project-card.reverse .project-links a {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  
+  .nav-links {
+    display: none; /* In a real app we'd add an off-canvas menu here */
+  }
+}

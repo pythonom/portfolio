@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Mathur | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of a Full Stack Developer specializing in data-driven systems and machine learning."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#hero">O<span class="accent">M</span></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Journey</a></li>
+          <li>
+            <a href="./resume/Om_Mathur_Resume.pdf" target="_blank">Resume</a>
+          </li>
+          <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Home / Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-content reveal">
+          <p class="subtitle">Hi, my name is</p>
+          <h1>Om Mathur.</h1>
+          <h2 class="sub-heading">I build data-driven systems.</h2>
+          <p class="hero-desc">
+            I'm a Full Stack Developer specializing in building robust, scalable
+            applications and integrating machine learning models into real-world
+            business solutions. I focus on creating seamless experiences from
+            the database to the DOM.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-visual" id="canvas-container">
+          <!-- Three.js will inject canvas here -->
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section section-padding">
+        <div class="container section-header reveal">
+          <h2>About Me</h2>
+          <div class="line"></div>
+        </div>
+        <div class="container about-grid reveal">
+          <div class="about-text">
+            <p>
+              Hello! I’m a BCA (Hons.) student specializing in AI & Data
+              Science.
+            </p>
+
+            <p>
+              I enjoy building systems that combine data, logic, and real-world
+              usability — whether it’s analyzing disease spread patterns,
+              developing machine learning models, or creating full-stack
+              applications.
+            </p>
+
+            <p>
+              Most of my learning comes from hands-on projects where I explore
+              how data can be transformed into meaningful insights and practical
+              solutions.
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="card-inner">
+              <h3>Highlights</h3>
+              <ul class="highlight-list">
+                <li>
+                  <strong>Education:</strong> BCA (Hons.) in AI & Data Science,
+                  K.R. Mangalam University
+                </li>
+                <li>
+                  <strong>Focus:</strong> Full Stack Development, Data Analysis,
+                  Machine Learning
+                </li>
+                <li>
+                  <strong>Philosophy:</strong> Write code for humans to read,
+                  machines to execute.
+                </li>
+                <li><strong>Availability:</strong> Open for Internships.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section section-padding">
+        <div class="container section-header reveal">
+          <h2>Tech Stack</h2>
+          <div class="line"></div>
+        </div>
+        <div class="container skills-grid reveal">
+          <!-- Frontend -->
+          <div class="skill-card">
+            <div class="skill-icon frontend-icon"></div>
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>CSS3 / SCSS</span>
+              <span>HTML5</span>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="skill-card">
+            <div class="skill-icon backend-icon"></div>
+            <h3>Backend</h3>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>FastAPI</span>
+            </div>
+          </div>
+          <!-- Data & ML -->
+          <div class="skill-card">
+            <div class="skill-icon data-icon"></div>
+            <h3>Data / ML</h3>
+            <div class="skill-tags">
+              <span>TensorFlow/ Keras</span>
+              <span>Pandas</span>
+              <span>scikit-learn</span>
+              <span>Matplotlib</span>
+              <span>Seaborn</span>
+            </div>
+          </div>
+          <!-- DevOps / Tools -->
+          <div class="skill-card">
+            <div class="skill-icon tools-icon"></div>
+            <h3>Tools / Cloud</h3>
+            <div class="skill-tags">
+              <span>SQL</span>
+              <span>Supabase</span>
+              <span>Colab</span>
+              <span>Git</span>
+              <span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section section-padding">
+        <div class="container section-header reveal">
+          <h2>Featured Work</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="container projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="images/project-skinscan-ai.png"
+                alt="SkinScan AI - Skin Cancer Detection"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <p class="project-overline">Deep Learning · Computer Vision</p>
+              <h3 class="project-title">SkinScan AI - Skin Cancer Detection</h3>
+              <div class="project-description">
+                <p>
+                  A dermoscopic skin lesion classifier comparing a from-scratch
+                  CNN against MobileNetV2 transfer learning across 7 diagnostic
+                  categories, with Grad-CAM explainability and an interactive
+                  Streamlit demo.
+                </p>
+
+                <ul>
+                  <li>
+                    • Trained and compared 3 models on HAM10000 (10,015 images,
+                    7 classes)
+                  </li>
+                  <li>
+                    • Handled severe class imbalance (58x gap between most/least
+                    common class) with class-weighted loss
+                  </li>
+                  <li>
+                    • Picked the best model by melanoma recall, not accuracy —
+                    the highest-accuracy model actually missed more real
+                    melanomas
+                  </li>
+                  <li>
+                    • Grad-CAM heatmaps for visual explainability, deployed via
+                    Streamlit
+                  </li>
+                </ul>
+              </div>
+              <ul class="project-tech-list">
+                <li>TensorFlow/Keras</li>
+                <li>MobileNetV2</li>
+                <li>Streamlit</li>
+                <li>Grad-CAM</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://github.com/pythonom/skin-lesion-classification"
+                  class="btn-icon"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 (Reversed) -->
+          <div class="project-card reverse reveal">
+            <div class="project-image">
+              <img
+                src="images/project-lost-time-analyzer.png"
+                alt="NeuroPredict Dashboard Analytics"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <p class="project-overline">Full-Stack + ML</p>
+              <h3 class="project-title">
+                Student Performance Management System
+              </h3>
+              <div class="project-description">
+                <p>
+                  A student risk-tracking dashboard for faculty. Upload a class
+                  CSV, and it scores every student's risk level using both a
+                  rule-based check and a trained ML model, then surfaces at-risk
+                  students, trends, and insights.
+                </p>
+
+                <ul>
+                  <li>• Built with React, Flask, Supabase, and Scikit-learn</li>
+                  <li>
+                    • Implemented a Decision Tree model for predicting outcomes
+                  </li>
+                  <li>
+                    • Integrated attendance, scores, and participation data
+                  </li>
+                  <li>
+                    • Designed a responsive dashboard for insights and reporting
+                  </li>
+                </ul>
+              </div>
+              <ul class="project-tech-list">
+                <li>React</li>
+                <li>Python (Flask)</li>
+                <li>Supabase</li>
+                <li>Scikit-learn</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://lost-time-analyzer.vercel.app/"
+                  class="btn-icon"
+                  >Visit Site</a
+                >
+                <a
+                  href="https://github.com/pythonom/lost-time-analyzer"
+                  class="btn-icon"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3  -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img src="images/project-tutorconnect.png" alt="TutorConnect" />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <p class="project-overline">Full-Stack · Hackathon Origin</p>
+              <h3 class="project-title">TutorConnect</h3>
+              <div class="project-description">
+                <p>
+                  A peer-to-peer tutoring platform — learners search for tutors
+                  by skill, book sessions around real availability, and leave
+                  reviews after each session
+                </p>
+                <ul>
+                  <li>
+                    • React 18 + TypeScript frontend, FastAPI backend,
+                    PostgreSQL (Supabase-hosted)
+                  </li>
+                  <li>
+                    • JWT auth with bcrypt password hashing and separate
+                    tutor/learner dashboards
+                  </li>
+                  <li>
+                    • Backend validates bookings against a tutor's actual weekly
+                    availability before confirming
+                  </li>
+                </ul>
+              </div>
+              <ul class="project-tech-list">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>FastAPI</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://ddtutorconnect.netlify.app/" class="btn-icon"
+                  >Visit Site</a
+                >
+                <a
+                  href="https://github.com/pythonom/tutorconnect"
+                  class="btn-icon"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 (reversed) -->
+          <div class="project-card reverse reveal">
+            <div class="project-image">
+              <img
+                src="images/project-infectious-disease.png"
+                alt="Infectious Disease Data Analysis"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <p class="project-overline">Data Analysis · Open Source</p>
+              <h3 class="project-title">Infectious Disease Data Analysis</h3>
+              <div class="project-description">
+                <p>
+                  Analyzed real-world datasets to identify patterns in disease
+                  spread and trends across multiple variables.
+                </p>
+                <ul>
+                  <li>
+                    • Performed data cleaning and preprocessing using Pandas
+                  </li>
+                  <li>• Visualized trends using Matplotlib</li>
+                  <li>• Applied SIR-based modeling concepts</li>
+                </ul>
+              </div>
+              <ul class="project-tech-list">
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Scikit-learn</li>
+                <li>Seaborn</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://github.com/pythonom/infectious-disease-analysis"
+                  class="btn-icon"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5  -->
+          <div class="project-card reveal">
+            <div class="project-image">
+              <img
+                src="images/project-heart-disease.png"
+                alt="Heart Disease Prediction"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <p class="project-overline">Machine Learning · Open Source</p>
+              <h3 class="project-title">Heart Disease Risk Predictor</h3>
+              <div class="project-description">
+                <p>
+                  A Flask app that predicts heart disease risk from 13 clinical
+                  measurements, comparing four models trained on the Cleveland
+                  Heart Disease dataset.
+                </p>
+                <ul>
+                  <li>
+                    • Trained and compared Logistic Regression, Decision Tree,
+                    Random Forest, and a small neural network
+                  </li>
+                  <li>
+                    • Logistic Regression is the default (85.25% accuracy,
+                    92.67% ROC-AUC), with live model-swap comparison in the UI
+                  </li>
+                  <li>
+                    • Flags input values outside typical healthy ranges with
+                    plain-language explanations
+                  </li>
+                  <li>
+                    • Surfaces Random Forest feature importances against dataset
+                    averages for disease vs. no-disease cases
+                  </li>
+                </ul>
+              </div>
+              <ul class="project-tech-list">
+                <li>Flask</li>
+                <li>Scikit-learn</li>
+                <li>Keras</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://github.com/pythonom/Heart-disease-prediction"
+                  class="btn-icon"
+                  >Github</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 (REVERSED) -->
+          <div class="project-card reversed reveal">
+            <div class="project-image">
+              <img
+                src="images/project-ott-uiux.png"
+                alt="OTT App UI/UX Design"
+              />
+              <div class="image-overlay"></div>
+            </div>
+            <div class="project-content">
+              <p class="project-overline">UI/UX Design</p>
+              <h3 class="project-title">OTT App UI/UX Design</h3>
+              <div class="project-description">
+                <p>Designed a scalable OTT platform interface using Figma.</p>
+                <ul>
+                  <li>• Built reusable components and design system</li>
+                  <li>• Focused on user flow and navigation</li>
+                  <li>• Created interactive prototypes</li>
+                </ul>
+              </div>
+              <ul class="project-tech-list">
+                <li>Figma</li>
+                <li>UI/UX</li>
+                <li>Prototyping</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://www.figma.com/design/5je4voMUYYVuZL0A9iKTto/ott-project?node-id=0-1&p=f&t=6ssis8oeuYeAbA6f-0"
+                  class="btn-icon"
+                  >View Design</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience / Journey -->
+      <section id="experience" class="exp-section section-padding">
+        <div class="container section-header reveal">
+          <h2>Professional Journey</h2>
+          <div class="line"></div>
+        </div>
+        <div class="container timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>BCA (Hons.) in AI & Data Science</h3>
+                <span class="company">@ K.R. Mangalam University</span>
+              </div>
+              <p class="exp-date">2025 - Present</p>
+              <ul class="exp-details">
+                <li>Focused on full stack development and machine learning.</li>
+                <li>
+                  Built multiple real-world projects combining data and web
+                  apps.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Data Analyst Intern</h3>
+                <span class="company">@ CodeAlpha</span>
+              </div>
+              <p class="exp-date">May 2026 - June 2026</p>
+              <ul class="exp-details">
+                <li>
+                  Completed a 1-month virtual internship analyzing real-world
+                  datasets and building data-driven insights.
+                </li>
+                <li>
+                  Delivered an IPL cricket analytics project — data cleaning,
+                  exploratory analysis, and visualization.
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/pythonom/CodeAlpha_IPLCricketAnalytics"
+                    target="_blank"
+                    >Project repository</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Machine Learning & Deep Learning Bootcamp</h3>
+                <span class="company">@ K.R. Mangalam University</span>
+              </div>
+              <p class="exp-date">June 2026 - July 2026</p>
+              <ul class="exp-details">
+                <li>
+                  Completed a hands-on bootcamp covering the full ML/DL
+                  pipeline.
+                </li>
+                <li>
+                  Applied concepts through hands-on projects and real-world case
+                  studies
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Hackathons & Practical Learning</h3>
+              </div>
+              <p class="exp-date">2025</p>
+              <ul class="exp-details">
+                <li>
+                  Participated in DeepDataHackathon (data-focused competition).
+                </li>
+                <li>Participated in Aarambhthon (problem-solving hackathon)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="exp-header">
+                <h3>Project-Based Learning</h3>
+              </div>
+              <p class="exp-date">2025 - Present</p>
+              <ul class="exp-details">
+                <li>
+                  Developed ML-based student performance prediction system.
+                </li>
+                <li>
+                  Worked on real-world datasets for analysis and visualization.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section section-padding">
+        <div class="container contact-container reveal">
+          <p class="contact-overline">What's Next?</p>
+          <h2 class="contact-title">Get In Touch</h2>
+          <p class="contact-desc">
+            I’m currently looking for internship opportunities and open to
+            collaborating on interesting projects.
+          </p>
+          <a
+            href="mailto:ommathur03@gmail.com"
+            class="btn btn-primary contact-btn"
+            >Say Hello</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <div class="social-links">
+          <a href="https://github.com/pythonom">Github</a>
+          <a href="https://www.linkedin.com/in/om-mathur306/">LinkedIn</a>
+        </div>
+        <p>Designed & Built by Om Mathur</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
